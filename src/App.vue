@@ -27,12 +27,12 @@
     <p>
       <a
         class="link"
-        :href="finished ? state.initGpsPos : state.initGpsPos"
+        :href="finished ? state.finalGpsPos : state.initGpsPos"
         target="_blank"
       >
         <img src="./assets/pin.svg" alt="" />
         <span v-if="finished">Hoppas det smakar!</span>
-        <span v-else>Ni måste vara här när tiden är slut!</span>
+        <span v-else>Preliminär plats*</span>
       </a>
     </p>
   </main>
@@ -42,7 +42,10 @@
       <small>
         <i>
           Vi har bokat en middag för två. <br />
-          Meddela mig om datum och tid inte passar.
+          Meddela mig om datum och tid inte passar. <br />
+          Den exakta platsen kommer att synas när tiden är slut, <br />
+          det tar ungefär 5min att gå, <br />
+          och bokningen börjar 15 min efter utsatt tid.
         </i>
       </small>
     </p>
@@ -60,9 +63,9 @@ export default {
   setup() {
     const state = reactive({
       now: new Date(),
-      deadline: new Date("2021-11-28T18:49:50"),
-      initGpsPos: "https://goo.gl/maps/ZsCujCZTEbHJFhr26",
-      finalGpsPos: "https://goo.gl/maps/GBJVtXWGR3bwL5qx5",
+      deadline: new Date("2022-01-18T19:45:00"),
+      initGpsPos: "https://goo.gl/maps/oG1KZgqSibkE2NJT7",
+      finalGpsPos: "https://goo.gl/maps/ShvSbLFBYekCnaP56",
     });
 
     const finished = computed(
@@ -123,6 +126,7 @@ a:focus {
 
 .link {
   display: flex;
+  justify-content: center;
   align-items: self-end;
   gap: 0.3rem;
 }
