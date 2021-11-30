@@ -42,10 +42,7 @@
       <small>
         <i>
           Vi har bokat en middag för två. <br />
-          Meddela mig om datum och tid inte passar. <br />
-          Den exakta platsen kommer att synas när tiden är slut, <br />
-          det tar ungefär 5min att gå, <br />
-          och bokningen börjar 15 min efter utsatt tid.
+          Meddela mig om datum och tid inte passar.
         </i>
       </small>
     </p>
